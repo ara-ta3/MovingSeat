@@ -1,7 +1,6 @@
-    var member = [
-    ];
+    var member = [];
     for(i=0;i<20;i++){
-        member[i] = "ああああああ";
+        member[i] = "あああああ"+ (i+1);
     }
     var count = 0;
     // $.get("assets/member.json", function(data){
@@ -9,7 +8,6 @@
     //     member = hoge.member;
     // });
     var seat_random = _.shuffle(_.range(20));
-    console.log(seat_random);
     function shuffle(){
         member = _.shuffle(member);
         shuffle_msg();
