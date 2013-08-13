@@ -1,25 +1,8 @@
 var member = [
-"hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge"
     ];
+    for(i=0;i<20;i++){
+        member[i] = "ああああああ";
+    }
     var count = 0;
     // $.get("assets/member.json", function(data){
     //     var hoge = JSON.parse(data);
