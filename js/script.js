@@ -10,6 +10,7 @@
     var seat_random = _.shuffle(_.range(20));
     function shuffle(){
         member = _.shuffle(member);
+        $("#dram")[0].play();
         shuffle_msg();
         shuffle_obj();
     }
@@ -17,6 +18,8 @@ function shuffle_msg(){
     $("#msg1").toggle('explode','',500);
     $("#msg2").toggle('explode','',500);
     if(count == 20){
+        $("#dram")[0].pause();
+        $("#sinbal")[0].play();
         return false;
     }
     setTimeout("shuffle_msg()",1000);
