@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
-    <style>
-        span.well.well-small{
-            visibility: none;
-        }
-    </style>
     <script src="js/jquery-2.0.0.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/jquery.shuffleLetters.js"></script>
+    <script src="js/script.js"></script>
     <title>Shuffle</title>
 </head>
 <body>
-    <div class="container">
         <div class="row hero-unit text-center">
             <h4 id="msg1" style="display:none">⊂ニ二( ＾ω＾)ニ二⊃しゃっふる⊂ニ二(＾ω＾ )ニ二⊃</h4>
             <h3>
@@ -24,57 +19,56 @@
                 ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣</br>
             </h3>
             <h4 id="msg2">⊂ニ二( ＾ω＾)ニ二⊃しゃっふる⊂ニ二( ＾ω＾)ニ二⊃</h4>
-            <button id="shuffle" class="btn btn-primary btn-small" onclick="shuffle();">しゃっふる！！！</button>
+            <button id="shuffle" class="btn btn-primary btn-large" onclick="shuffle();">しゃっふる！！！</button>
+        </div>
+        <div class="row">
+            <div class="span4 offset8 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_1"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_2"></h3>
+            </div>
+            <div class="span4 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_3"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_4"></h3>
+            </div>
         </div>
         <div class="row">
             <div class="span4 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_1"></span>
-                <span class="text-info well text-center well-small pull" id="seat_2"></span>
+                <h3 class="text-info well text-center well-small pull-left" id="seat_5"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_6"></h3>
             </div>
             <div class="span4 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_3"></span>
-                <span class="text-info well text-center well-small pull" id="seat_4"></span>
+                <h3 class="text-info well text-center well-small pull-left" id="seat_7"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_8"></h3>
+            </div>
+            <div class="span4 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_9"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_10"></h3>
+            </div>
+            <div class="span4 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_11"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_12"></h3>
             </div>
         </div>
         <div class="row">
-            <div class="span2 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_5"></span>
-                <span class="text-info well text-center well-small pull" id="seat_6"></span>
+            <div class="span4 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_13"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_14"></h3>
             </div>
-            <div class="span3 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_7"></span>
-                <span class="text-info well text-center well-small pull" id="seat_8"></span>
+            <div class="span4 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_15"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_16"></h3>
             </div>
-            <div class="span3 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_9"></span>
-                <span class="text-info well text-center well-small pull" id="seat_10"></span>
+            <div class="span4 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_17"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_18"></h3>
             </div>
-            <div class="span2 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_11"></span>
-                <span class="text-info well text-center well-small pull" id="seat_12"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span2 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_13"></span>
-                <span class="text-info well text-center well-small pull" id="seat_14"></span>
-            </div>
-            <div class="span3 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_15"></span>
-                <span class="text-info well text-center well-small pull" id="seat_16"></span>
-            </div>
-            <div class="span3 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_17"></span>
-                <span class="text-info well text-center well-small pull" id="seat_18"></span>
-            </div>
-            <div class="span2 well text-center ">
-                <span class="text-info well text-center well-small" id="seat_19"></span>
-                <span class="text-info well text-center well-small pull" id="seat_20"></span>
+            <div class="span4 well text-center ">
+                <h3 class="text-info well text-center well-small pull-left" id="seat_19"></h3>
+                <h3 class="text-info well text-center well-small pull-right" id="seat_20"></h3>
             </div>
         </div>
         <div class="row well text-center  text-center">
             <h2 class="text-warning">前方 - プロジェクター</h2>
         </div>
-    </div>
 </body>
 </html>

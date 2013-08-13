@@ -1,30 +1,15 @@
-var member = [
-"hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge",
-    "hogehoge"
+    var member = [
     ];
+    for(i=0;i<20;i++){
+        member[i] = "ああああああ";
+    }
     var count = 0;
     // $.get("assets/member.json", function(data){
     //     var hoge = JSON.parse(data);
     //     member = hoge.member;
     // });
+    var seat_random = _.shuffle(_.range(20));
+    console.log(seat_random);
     function shuffle(){
         member = _.shuffle(member);
         shuffle_msg();
@@ -42,9 +27,9 @@ function shuffle_obj(){
     if(count == 20){
         return true;
     };
-    var obj = $("#seat_"+(count+1)).shuffleLetters({
-            'text': member[count]
+    var obj = $("#seat_"+(seat_random[count]+1)).shuffleLetters({
+            'text': member[seat_random[count]]
             });
     count++;
-    setTimeout("shuffle_obj()",500);
+    setTimeout("shuffle_obj()",300);
 }
